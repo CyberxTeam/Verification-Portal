@@ -1,0 +1,27 @@
+
+# 1. Force MIME types for TypeScript/JSX files
+<IfModule mod_mime.c>
+  AddType application/javascript .ts
+  AddType application/javascript .tsx
+  AddType application/javascript .jsx
+</IfModule>
+
+# 2. Overwrite Content-Type header to satisfy browser security (nosniff)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ts|tsx|jsx)$">
+    Header set Content-Type "application/javascript"
+  </FilesMatch>
+</IfModule>
+
+# 3. Standard SPA Routing
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# 4. Prevent folder listing
+Options -Indexes
