@@ -4,46 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HORNY | Elite Verification Portal</title>
-    <!-- Tailwind CSS -->
+    <title>OrganicTrust | Global Verification Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Babel for runtime JSX/TSX transpilation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;500;700;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f8fafc; /* Slate 50 */
-            color: #0f172a; /* Slate 900 */
-            overflow-x: hidden;
-            font-family: 'Montserrat', sans-serif;
-        }
+        body { margin: 0; padding: 0; background-color: #f7f9f7; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+        .font-signature { font-family: 'Dancing Script', cursive; }
         #root:empty::before {
-            content: 'Initializing Secure Environment...';
+            content: 'Initializing Secure Organic Registry...';
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: #aa771c;
+            color: #065f46;
             font-family: 'Cinzel', serif;
             letter-spacing: 0.2em;
             font-size: 14px;
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
-        .font-signature { font-family: 'Dancing Script', cursive; }
-        .gold-text { 
-            background: linear-gradient(to bottom, #bf953f, #aa771c, #8a6d3b); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
     </style>
-    <script>
-        // Global process polyfill
-        window.process = { env: { API_KEY: "" } };
-    </script>
+    <script>window.process = { env: { API_KEY: "" } };</script>
     <script type="importmap">
 {
   "imports": {

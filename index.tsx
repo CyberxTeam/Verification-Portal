@@ -38,342 +38,177 @@ export interface VerificationResult {
 }
 
 // --- CONSTANTS ---
+export const BRAND_NAME = "OrganicTrust";
 export const COUNTRIES: CountryData[] = [
-  { 
-    name: 'Bangladesh', code: 'BD', prefix: '+880', flag: '🇧🇩',
-    cities: ['Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi', 'Khulna']
-  },
-  { 
-    name: 'United Kingdom', code: 'GB', prefix: '+44', flag: '🇬🇧',
-    cities: ['London', 'Manchester', 'Birmingham', 'Glasgow']
-  },
-  { 
-    name: 'United States', code: 'US', prefix: '+1', flag: '🇺🇸',
-    cities: ['New York', 'Los Angeles', 'Chicago', 'Miami']
-  },
-  { 
-    name: 'Saudi Arabia', code: 'SA', prefix: '+966', flag: '🇸🇦',
-    cities: ['Riyadh', 'Jeddah', 'Mecca', 'Medina']
-  },
-  { 
-    name: 'United Arab Emirates', code: 'AE', prefix: '+971', flag: '🇦🇪',
-    cities: ['Dubai', 'Abu Dhabi', 'Sharjah']
-  },
-  { 
-    name: 'Canada', code: 'CA', prefix: '+1', flag: '🇨🇦',
-    cities: ['Toronto', 'Vancouver', 'Montreal']
-  },
-  { 
-    name: 'Malaysia', code: 'MY', prefix: '+60', flag: '🇲🇾',
-    cities: ['Kuala Lumpur', 'Penang', 'Johor Bahru']
-  },
-  { 
-    name: 'India', code: 'IN', prefix: '+91', flag: '🇮🇳',
-    cities: ['Mumbai', 'Delhi', 'Bangalore', 'Kolkata']
-  },
-  { 
-    name: 'Singapore', code: 'SG', prefix: '+65', flag: '🇸🇬',
-    cities: ['Singapore City', 'Jurong', 'Changi']
-  },
-  { 
-    name: 'Australia', code: 'AU', prefix: '+61', flag: '🇦🇺',
-    cities: ['Sydney', 'Melbourne', 'Brisbane', 'Perth']
-  },
-  { 
-    name: 'Germany', code: 'DE', prefix: '+49', flag: '🇩🇪',
-    cities: ['Berlin', 'Munich', 'Hamburg', 'Frankfurt']
-  },
-  { 
-    name: 'France', code: 'FR', prefix: '+33', flag: '🇫🇷',
-    cities: ['Paris', 'Lyon', 'Marseille']
-  },
-  { 
-    name: 'Italy', code: 'IT', prefix: '+39', flag: '🇮🇹',
-    cities: ['Rome', 'Milan', 'Venice']
-  },
-  { 
-    name: 'Japan', code: 'JP', prefix: '+81', flag: '🇯🇵',
-    cities: ['Tokyo', 'Osaka', 'Kyoto']
-  },
-  { 
-    name: 'Brazil', code: 'BR', prefix: '+55', flag: '🇧🇷',
-    cities: ['Sao Paulo', 'Rio de Janeiro']
-  },
-  { 
-    name: 'Kuwait', code: 'KW', prefix: '+965', flag: '🇰🇼',
-    cities: ['Kuwait City', 'Jahra']
-  },
-  { 
-    name: 'Oman', code: 'OM', prefix: '+968', flag: '🇴🇲',
-    cities: ['Muscat', 'Salalah']
-  },
-  { 
-    name: 'Qatar', code: 'QA', prefix: '+974', flag: '🇶🇦',
-    cities: ['Doha', 'Al Wakrah']
-  }
+  { name: 'Bangladesh', code: 'BD', prefix: '+880', flag: '🇧🇩', cities: ['Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi'] },
+  { name: 'United Kingdom', code: 'GB', prefix: '+44', flag: '🇬🇧', cities: ['London', 'Manchester'] },
+  { name: 'United States', code: 'US', prefix: '+1', flag: '🇺🇸', cities: ['New York', 'Los Angeles'] },
+  { name: 'Saudi Arabia', code: 'SA', prefix: '+966', flag: '🇸🇦', cities: ['Riyadh', 'Jeddah'] },
+  { name: 'UAE', code: 'AE', prefix: '+971', flag: '🇦🇪', cities: ['Dubai', 'Abu Dhabi'] },
+  { name: 'Malaysia', code: 'MY', prefix: '+60', flag: '🇲🇾', cities: ['Kuala Lumpur'] }
 ];
-
-export const MASK_CHAR = '*';
 
 export const DISTRIBUTOR_REGISTRY: DistributorInfo[] = [
   {
     name: 'Tarikul Islam',
     number: '01888525124',
     location: 'Rajshahi, Natore, Laxmipur Bazar',
-    license: '12345678',
+    license: 'OT-REG-8852',
     facebookUrl: 'https://www.facebook.com/tarikulv3',
     whatsappNumber: '8801888525124'
   },
   {
-    name: 'Tarikul Islam',
+    name: 'Premium Partner BD',
     number: '01757293124',
-    location: 'Rajshahi, Natore, Laxmipur Bazar',
-    license: '12345678',
+    location: 'Dhaka, Gulshan-2',
+    license: 'OT-REG-7293',
     facebookUrl: 'https://www.facebook.com/tarikulv3',
     whatsappNumber: '8801888525124'
-  }, 
-  {
-    name: 'Premium Partner',
-    number: '01888525125',
-    location: 'Rajshahi, Natore',
-    license: '1278',
-    facebookUrl: 'https://www.facebook.com/tarikulv',
-    whatsappNumber: '8801888525125'
   }
 ];
 
 export const PRODUCT_IMAGE_URL = 'https://organicproductcertified.top/wp-content/uploads/2026/02/Untitled-design.png';
 export const LOGO_URL = 'https://organicproductcertified.top/wp-content/uploads/2026/01/Untitled-design-2.png';
 export const CERTIFICATE_LOGO_URL = 'https://puremaxlabs.com/cdn/shop/files/puremaxlogo_180x.png?v=1613713596';
-export const GOAT_MASCOT_URL = 'https://organicproductcertified.top/wp-content/uploads/2026/01/Untitled-design-2.png';
-export const USA_EMBLEM_URL = 'https://img.freepik.com/premium-vector/usa-emblem-design_24908-14062.jpg?semt=ais_user_personalization&w=740&q=80';
+export const USA_EMBLEM_URL = 'https://img.freepik.com/premium-vector/usa-emblem-design_24908-14062.jpg?w=740';
 
 // --- UTILS ---
 export const maskNumber = (fullNumber: string): string => {
   if (fullNumber.length < 5) return fullNumber;
-  const firstThree = fullNumber.substring(0, 3);
-  const lastTwo = fullNumber.substring(fullNumber.length - 2);
-  const maskedLength = Math.max(0, fullNumber.length - 5);
-  return `${firstThree}${'*'.repeat(maskedLength)}${lastTwo}`;
+  return `${fullNumber.substring(0, 3)}****${fullNumber.substring(fullNumber.length - 2)}`;
 };
 
 export const generateRandomActivity = (): Activity => {
   const country = COUNTRIES[Math.floor(Math.random() * COUNTRIES.length)];
   const city = country.cities[Math.floor(Math.random() * country.cities.length)];
   const randomDigits = Math.floor(Math.random() * 9000000) + 1000000;
-  return {
-    id: Date.now(),
-    country,
-    city,
-    number: `${country.prefix}${randomDigits}`,
-    timestamp: new Date()
-  };
-};
-
-export const generateCertificateId = (): string => {
-  return 'CERT-' + Math.random().toString(36).substr(2, 9).toUpperCase();
-};
-
-// --- SERVICES ---
-export const getOrganicInsight = async (productType: string = "general organic"): Promise<string> => {
-  try {
-    const apiKey = typeof process !== 'undefined' && process.env ? process.env.API_KEY : null;
-    
-    if (!apiKey) {
-      console.warn("API Key not found, using fallback content.");
-      return "Authentic organic products ensure the highest standards of safety and sustainability for your family.";
-    }
-
-    const ai = new GoogleGenAI({ apiKey });
-    const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
-      contents: `Generate a short, trust-building statement (2 sentences) about why ${productType} products are better when verified for authenticity. Mention health and environmental sustainability.`,
-    });
-    
-    return response.text || "Authentic organic products ensure the highest standards of safety and sustainability for your family.";
-  } catch (error) {
-    console.error("Gemini Insight Error:", error);
-    return "Authenticity verification protects consumers from hazardous counterfeits while supporting sustainable organic farming.";
-  }
+  return { id: Date.now(), country, city, number: `${country.prefix}${randomDigits}`, timestamp: new Date() };
 };
 
 // --- COMPONENTS ---
 
-// Preloader Component
-const Preloader: React.FC<{ insight: string; onFinish: () => void }> = ({ insight, onFinish }) => {
+const Preloader: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
   const [isVisible, setIsVisible] = useState(true);
-  const [isLaughing, setIsLaughing] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    const laughTimer = setTimeout(() => setIsLaughing(true), 800);
-    const exitTimer = setTimeout(() => setIsExiting(true), 2500);
+    const timer = setTimeout(() => setIsExiting(true), 2500);
     const removeTimer = setTimeout(() => {
       setIsVisible(false);
       onFinish();
-    }, 3000);
-
-    return () => {
-      clearTimeout(laughTimer);
-      clearTimeout(exitTimer);
-      clearTimeout(removeTimer);
-    };
+    }, 3200);
+    return () => { clearTimeout(timer); clearTimeout(removeTimer); };
   }, [onFinish]);
 
   if (!isVisible) return null;
 
   return (
-    <div className={`fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center transition-all duration-700 ${isExiting ? 'opacity-0 scale-110 blur-xl pointer-events-none' : 'opacity-100'}`}>
-      <div className="relative">
-        {isLaughing && (
-          <div className="absolute inset-0 z-0 flex items-center justify-center">
-            {[...Array(20)].map((_, i) => (
-              <div 
-                key={i} 
-                className="absolute rounded-full blur-sm animate-fire"
-                style={{
-                  width: `${Math.random() * 15 + 5}px`,
-                  height: `${Math.random() * 15 + 5}px`,
-                  backgroundColor: i % 2 === 0 ? '#d4af37' : '#fcf6ba',
-                  left: '50%',
-                  top: '50%',
-                  '--x': `${(Math.random() - 0.5) * 400}px`,
-                  '--y': `${(Math.random() - 0.5) * 400}px`,
-                  animationDuration: `${0.5 + Math.random() * 0.5}s`,
-                } as any}
-              />
-            ))}
-          </div>
-        )}
-        
-        <div className={`relative z-10 transition-transform duration-200 ${isLaughing ? 'animate-pulse scale-110' : ''}`}>
-          <img 
-            src={GOAT_MASCOT_URL} 
-            alt="Mascot" 
-            className="w-48 md:w-64 drop-shadow-[0_10px_30px_rgba(184,134,11,0.2)]"
-          />
+    <div className={`fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center transition-all duration-1000 ${isExiting ? 'opacity-0 scale-110 blur-2xl pointer-events-none' : 'opacity-100'}`}>
+      <div className="relative animate-bounce">
+        <img src={LOGO_URL} alt="Logo" className="w-40 md:w-56 drop-shadow-2xl" />
+      </div>
+      <div className="mt-8 text-center">
+        <h2 className="text-2xl md:text-4xl font-cinzel font-black tracking-[0.2em] text-emerald-800 mb-2">ORGANIC TRUST</h2>
+        <div className="flex gap-1 justify-center">
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce delay-75"></div>
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce delay-150"></div>
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce delay-300"></div>
         </div>
+        <p className="mt-4 text-emerald-600/60 text-[10px] uppercase font-bold tracking-widest">Securing Global Distribution</p>
       </div>
-
-      <div className="mt-8 text-center max-w-lg px-6">
-        <h2 className="text-3xl md:text-5xl font-cinzel font-black tracking-[0.3em] gold-text mb-4">HORNY</h2>
-        <p className="text-slate-400 text-xs md:text-sm italic animate-pulse px-4 font-medium">"{insight || 'Loading secure environment...'}"</p>
-      </div>
-
-      <style>{`
-        @keyframes fire {
-          0% { transform: translate(0, 0) scale(1); opacity: 1; }
-          100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
-        }
-        .animate-fire { animation: fire linear infinite; }
-      `}</style>
     </div>
   );
 };
 
-// Activity Feed Component
 const ActivityPopup: React.FC = () => {
   const [activities, setActivities] = useState<Activity[]>([]);
 
   useEffect(() => {
-    // Generate an initial activity immediately
-    const firstAct = generateRandomActivity();
-    setActivities([firstAct]);
-
     const interval = setInterval(() => {
       const newAct = generateRandomActivity();
-      setActivities(prev => [newAct, ...prev.slice(0, 2)]); // Show up to 3 activities
-    }, 4500);
+      setActivities(prev => [newAct, ...prev.slice(0, 1)]);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 flex flex-col-reverse gap-3 pointer-events-none max-w-xs">
+    <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3 pointer-events-none">
       {activities.map((act) => (
-        <div key={act.id} className="bg-white/90 backdrop-blur-md border border-slate-200 p-3 rounded-2xl flex items-center gap-4 animate-slide-in shadow-xl w-72">
-          <div className="bg-slate-100 p-2 rounded-xl text-2xl shadow-inner">
-            {act.country.flag}
-          </div>
+        <div key={act.id} className="bg-white/80 backdrop-blur-xl border border-emerald-100 p-4 rounded-2xl flex items-center gap-4 animate-slide-in shadow-2xl w-80">
+          <div className="bg-emerald-50 p-2 rounded-xl text-2xl shadow-inner border border-emerald-100">{act.country.flag}</div>
           <div className="flex-1">
-            <div className="flex justify-between items-start mb-0.5">
-              <p className="text-[10px] font-black text-amber-600 uppercase tracking-tighter">Live Verification</p>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mt-1"></span>
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-[10px] font-black text-emerald-600 uppercase tracking-tighter">Verified Organic Partner</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
             </div>
-            <p className="text-[13px] font-bold text-slate-900 leading-tight">{act.city}, {act.country.name}</p>
-            <p className="text-[10px] text-slate-500 font-mono mt-0.5">{maskNumber(act.number)}</p>
+            <p className="text-[13px] font-bold text-slate-800 leading-none">{act.city}, {act.country.name}</p>
+            <p className="text-[10px] text-slate-400 font-mono mt-1">{maskNumber(act.number)}</p>
           </div>
         </div>
       ))}
       <style>{`
-        @keyframes slide-in { from { transform: translateX(-100%) scale(0.9); opacity: 0; } to { transform: translateX(0) scale(1); opacity: 1; } }
-        .animate-slide-in { animation: slide-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes slide-in { from { transform: translateX(-40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        .animate-slide-in { animation: slide-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
       `}</style>
     </div>
   );
 };
 
-// Main App Component
 const App: React.FC = () => {
   const [appReady, setAppReady] = useState(false);
   const [inputNumber, setInputNumber] = useState('');
   const [isVerifying, setIsVerifying] = useState(false);
   const [result, setResult] = useState<VerificationResult | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [insight, setInsight] = useState<string>('');
+  const [insight, setInsight] = useState('');
 
   useEffect(() => {
-    const init = async () => {
+    const fetchInsight = async () => {
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       try {
-        const text = await getOrganicInsight("authorized distribution");
-        setInsight(text);
-      } catch (e) {
-        setInsight("Premium organic verification for global distribution.");
+        const response = await ai.models.generateContent({
+          model: 'gemini-3-flash-preview',
+          contents: "Say a short trust-building sentence about certified organic products.",
+        });
+        setInsight(response.text || "Certified organic ensures pure, safe ingredients for your well-being.");
+      } catch {
+        setInsight("Verified organic quality guaranteed by global standards.");
       }
     };
-    init();
+    fetchInsight();
   }, []);
 
   const handleVerify = async (e: React.FormEvent) => {
     e.preventDefault();
-    const cleanId = inputNumber.trim();
-    if (!cleanId) {
-      setError('Please enter a valid ID.');
-      return;
-    }
-    setError(null);
+    if (!inputNumber) return;
     setIsVerifying(true);
     setResult(null);
-
-    await new Promise(r => setTimeout(r, 1500));
-    const found = DISTRIBUTOR_REGISTRY.find(d => d.number === cleanId);
-    
+    await new Promise(r => setTimeout(r, 1800));
+    const found = DISTRIBUTOR_REGISTRY.find(d => d.number === inputNumber);
     setResult({
       isOriginal: !!found,
       distributor: found,
-      inputNumber: cleanId,
+      inputNumber,
       timestamp: new Date(),
-      certificateId: generateCertificateId()
+      certificateId: 'OT-' + Math.random().toString(36).substr(2, 6).toUpperCase()
     });
     setIsVerifying(false);
   };
 
   return (
     <>
-      <Preloader insight={insight} onFinish={() => setAppReady(true)} />
-      
+      <Preloader onFinish={() => setAppReady(true)} />
       {appReady && (
-        <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-amber-100 selection:text-amber-900 animate-fade-in pb-20">
-          {/* Header - Transparent Glassmorphism */}
-          <nav className="border-b border-slate-200 bg-white/30 backdrop-blur-md sticky top-0 z-40 transition-all">
+        <div className="min-h-screen bg-[#f7f9f7] text-slate-900 selection:bg-emerald-100 animate-fade-in pb-20">
+          <nav className="border-b border-emerald-100 bg-white/50 backdrop-blur-md sticky top-0 z-40">
             <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img src={LOGO_URL} alt="Logo" className="h-10 w-auto" />
-                <span className="text-xl font-cinzel font-black gold-text">HORNY</span>
+                <span className="text-xl font-cinzel font-black tracking-widest text-emerald-900">{BRAND_NAME}</span>
               </div>
-              <div className="hidden md:flex gap-6 text-[10px] font-black uppercase tracking-widest text-slate-500">
-                <span className="hover:text-amber-600 cursor-pointer transition-colors">Safety</span>
-                <span className="hover:text-amber-600 cursor-pointer transition-colors">Compliance</span>
-                <span className="hover:text-amber-600 cursor-pointer transition-colors">Support</span>
+              <div className="hidden md:flex gap-6 text-[10px] font-black uppercase tracking-widest text-emerald-700/60">
+                <span className="cursor-pointer hover:text-emerald-900">Safety</span>
+                <span className="cursor-pointer hover:text-emerald-900">Partners</span>
+                <span className="cursor-pointer hover:text-emerald-900">Ethics</span>
               </div>
             </div>
           </nav>
@@ -381,33 +216,32 @@ const App: React.FC = () => {
           <main className="max-w-3xl mx-auto px-6 pt-12">
             <div className="text-center mb-12">
               <div className="relative inline-block mb-8">
-                <div className="absolute inset-0 bg-amber-200/20 blur-3xl rounded-full"></div>
-                <img src={PRODUCT_IMAGE_URL} alt="Product" className="relative w-48 mx-auto rounded-3xl shadow-xl border border-white" />
+                <div className="absolute inset-0 bg-emerald-200/20 blur-3xl rounded-full"></div>
+                <img src={PRODUCT_IMAGE_URL} alt="Product" className="relative w-48 mx-auto rounded-3xl shadow-2xl border-4 border-white" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">Verification <span className="gold-text">Portal</span></h1>
-              <p className="text-slate-500 text-sm md:text-base max-w-md mx-auto leading-relaxed">Global Registry Access. Enter registered mobile number or license ID for instant authentication.</p>
+              <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight text-emerald-950">Verification <span className="text-emerald-600">Portal</span></h1>
+              <p className="text-slate-500 text-sm md:text-base max-w-md mx-auto leading-relaxed italic">"{insight}"</p>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm mb-12 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full blur-3xl -mr-16 -mt-16 opacity-50"></div>
+            <div className="bg-white border border-emerald-100 rounded-[2.5rem] p-10 shadow-xl mb-12 relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-emerald-50 rounded-full blur-3xl opacity-60"></div>
               <form onSubmit={handleVerify} className="space-y-6 relative z-10">
                 <div>
-                  <label className="text-[10px] font-black text-amber-600 uppercase tracking-[0.2em] block mb-3">Partner Registry ID</label>
+                  <label className="text-[10px] font-black text-emerald-700 uppercase tracking-[0.25em] block mb-4">Registry Identification</label>
                   <input 
                     type="text" 
-                    value={inputNumber} 
+                    value={inputNumber}
                     onChange={(e) => setInputNumber(e.target.value.replace(/[^0-9]/g, ''))}
-                    placeholder="Enter Mobile (e.g. 01888525124)"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-xl focus:outline-none focus:border-amber-400 focus:ring-4 focus:ring-amber-500/5 transition-all"
+                    placeholder="Enter Registered Mobile Number"
+                    className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-6 py-4 text-xl focus:outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-500/5 transition-all text-center"
                   />
-                  {error && <p className="mt-3 text-red-500 text-sm font-bold flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span> {error}</p>}
                 </div>
                 <button 
                   type="submit" 
                   disabled={isVerifying}
-                  className="w-full bg-gradient-to-r from-[#bf953f] to-[#aa771c] text-white font-black py-5 rounded-2xl text-lg hover:brightness-105 shadow-lg shadow-amber-900/10 transition-all disabled:opacity-50 active:scale-[0.98]"
+                  className="w-full bg-emerald-700 text-white font-black py-5 rounded-2xl text-lg hover:bg-emerald-800 shadow-lg shadow-emerald-900/10 transition-all active:scale-[0.98] disabled:opacity-50"
                 >
-                  {isVerifying ? 'SEARCHING SECURE REGISTRY...' : 'VERIFY IDENTITY'}
+                  {isVerifying ? 'SEARCHING REGISTRY...' : 'AUTHENTICATE NOW'}
                 </button>
               </form>
             </div>
@@ -417,61 +251,57 @@ const App: React.FC = () => {
                 {result.isOriginal ? (
                   <div className="text-center">
                     <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 mb-8 flex items-center gap-4 justify-center">
-                      <div className="bg-emerald-500 p-2 rounded-full shadow-lg shadow-emerald-500/20">
+                      <div className="bg-emerald-500 p-2 rounded-full shadow-lg">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                       </div>
-                      <span className="text-emerald-700 font-black uppercase text-lg tracking-wide">Authorized Partner Confirmed</span>
+                      <span className="text-emerald-800 font-black uppercase text-lg tracking-wide">Authorized Partner Confirmed</span>
                     </div>
                     
-                    {/* Certificate with Watermark */}
-                    <div className="bg-white border-[1px] border-slate-200 p-1 rounded-2xl shadow-2xl relative">
-                        <div className="border-4 border-double border-[#d4af37] p-8 rounded-xl bg-white relative overflow-hidden text-left font-serif">
-                           {/* Watermark Emblem */}
-                           <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.05] grayscale">
-                              <img src={USA_EMBLEM_URL} alt="USA Emblem" className="w-[80%] object-contain" />
+                    <div className="bg-white border-[1px] border-emerald-100 p-1 rounded-3xl shadow-2xl relative">
+                        <div className="border-4 border-double border-emerald-200 p-10 rounded-2xl bg-white relative overflow-hidden text-left font-serif">
+                           <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.03] grayscale">
+                              <img src={USA_EMBLEM_URL} alt="Emblem" className="w-[80%]" />
                            </div>
 
-                           <div className="absolute top-0 right-0 p-4 opacity-[0.03] font-sans text-7xl font-black pointer-events-none">OFFICIAL</div>
-                           
                            <div className="relative z-10">
                              <div className="text-center mb-10">
-                               {/* Updated Certificate Logo - PureMax Labs */}
-                               <img src={CERTIFICATE_LOGO_URL} alt="Certified Logo" className="h-16 w-auto mx-auto mb-6" />
-                               <h3 className="text-slate-900 text-2xl font-cinzel underline underline-offset-8 decoration-[#d4af37]/50 tracking-widest">DISTRIBUTION LICENSE</h3>
+                               <img src={LOGO_URL} alt="Logo" className="h-16 mx-auto mb-4" />
+                               <h3 className="text-emerald-900 text-2xl font-cinzel underline underline-offset-8 decoration-emerald-200 tracking-widest uppercase">Distribution License</h3>
+                               <p className="text-[9px] text-emerald-600 font-sans font-bold tracking-[0.5em] mt-4">OFFICIAL CERTIFICATION</p>
                              </div>
                              
-                             <div className="space-y-6 text-slate-700">
+                             <div className="space-y-8 text-slate-700">
                                <div>
                                   <p className="text-[10px] uppercase font-sans font-bold text-slate-400 tracking-widest mb-1">Authenticated Holder</p>
-                                  <h2 className="text-4xl font-black text-[#8a6d3b] italic font-cinzel">{result.distributor?.name}</h2>
+                                  <h2 className="text-4xl font-black text-emerald-900 italic font-cinzel">{result.distributor?.name}</h2>
                                </div>
                                
-                               <div className="grid grid-cols-2 gap-6 text-sm border-y border-slate-100 py-6 font-sans">
+                               <div className="grid grid-cols-2 gap-8 text-sm border-y border-emerald-50 py-8 font-sans">
                                  <div>
-                                    <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Registry ID</p>
-                                    <p className="text-slate-900 font-bold">{result.distributor?.number}</p>
+                                    <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Partner ID</p>
+                                    <p className="text-emerald-950 font-bold">{result.distributor?.number}</p>
                                  </div>
                                  <div>
-                                    <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">License No.</p>
-                                    <p className="text-slate-900 font-bold">{result.distributor?.license}</p>
+                                    <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">License Code</p>
+                                    <p className="text-emerald-950 font-bold">{result.distributor?.license}</p>
                                  </div>
                                  <div className="col-span-2">
-                                    <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Authorized Area</p>
-                                    <p className="text-slate-900 font-bold">{result.distributor?.location}</p>
+                                    <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Authorized Distribution Zone</p>
+                                    <p className="text-emerald-950 font-bold">{result.distributor?.location}</p>
                                  </div>
                                </div>
                              </div>
 
                              <div className="mt-12 flex justify-between items-end">
                                <div>
-                                  <p className="text-[9px] text-slate-400 uppercase font-sans font-bold tracking-tighter">Certification Date</p>
-                                  <p className="text-sm text-slate-900 font-sans font-bold">{result.timestamp.toLocaleDateString()}</p>
+                                  <p className="text-[9px] text-slate-400 uppercase font-sans font-bold tracking-tighter">Issue Date</p>
+                                  <p className="text-sm text-emerald-950 font-sans font-bold">{result.timestamp.toLocaleDateString()}</p>
                                </div>
                                <div className="text-right">
                                   <p className="text-[9px] text-slate-400 uppercase font-sans font-bold mb-2">Legal Authentication</p>
-                                  <p className="font-signature text-3xl text-[#8a6d3b] leading-none mb-1">Marie E. Richmond</p>
-                                  <div className="h-[1px] w-40 bg-gradient-to-r from-transparent via-[#d4af37]/50 to-transparent ml-auto mb-2"></div>
-                                  <p className="text-[8px] text-slate-400 uppercase font-sans tracking-[0.3em] font-black">Authorized Attorney at Law</p>
+                                  <p className="font-signature text-3xl text-emerald-800 leading-none mb-1">Marie E. Richmond</p>
+                                  <div className="h-[1px] w-40 bg-gradient-to-r from-transparent via-emerald-200 to-transparent ml-auto mb-2"></div>
+                                  <p className="text-[8px] text-emerald-600 uppercase font-sans tracking-[0.3em] font-black">Chief Legal Officer</p>
                                </div>
                              </div>
                            </div>
@@ -479,20 +309,19 @@ const App: React.FC = () => {
                     </div>
 
                     <div className="mt-8 flex gap-4 justify-center no-print">
-                      <button onClick={() => window.print()} className="bg-white border border-slate-200 hover:bg-slate-50 px-8 py-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all shadow-sm">Save/Print License</button>
-                      <a href={`https://wa.me/${result.distributor?.whatsappNumber}`} target="_blank" rel="noopener" className="bg-[#25D366] text-white px-8 py-4 rounded-xl text-xs font-black uppercase tracking-widest hover:brightness-105 transition-all shadow-md shadow-green-500/20 flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.394 0 12.03c0 2.12.553 4.189 1.601 6.03l-1.701 6.21 6.353-1.666c1.789.975 3.798 1.489 5.842 1.49h.005c6.634 0 12.032-5.395 12.035-12.031a11.785 11.785 0 00-3.414-8.514" /></svg>
-                        Contact your Distributor
+                      <button onClick={() => window.print()} className="bg-white border border-slate-200 hover:bg-slate-50 px-8 py-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all shadow-sm">Save License</button>
+                      <a href={`https://wa.me/${result.distributor?.whatsappNumber}`} target="_blank" rel="noopener" className="bg-[#25D366] text-white px-8 py-4 rounded-xl text-xs font-black uppercase tracking-widest hover:scale-105 transition-all shadow-lg flex items-center gap-2">
+                        WhatsApp Contact
                       </a>
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-white border border-red-100 rounded-3xl p-12 text-center shadow-sm">
-                    <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                  <div className="bg-white border-2 border-red-50 rounded-[2.5rem] p-16 text-center shadow-xl">
+                    <div className="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg className="w-10 h-10 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                     </div>
                     <h2 className="text-2xl font-black text-slate-900 mb-2 uppercase tracking-tight">Access Denied</h2>
-                    <p className="text-slate-500 text-sm max-w-xs mx-auto">The ID <span className="text-red-600 font-black">{result.inputNumber}</span> could not be verified in our global registry of authorized partners.</p>
+                    <p className="text-slate-500 text-sm max-w-xs mx-auto">This ID could not be found in our Global Registry of Organic Trust partners.</p>
                   </div>
                 )}
               </div>
@@ -500,9 +329,8 @@ const App: React.FC = () => {
           </main>
 
           <ActivityPopup />
-          
-          <footer className="max-w-3xl mx-auto px-6 mt-12 text-center text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-            <p>&copy; 2026 HORNY GLOBAL LOGISTICS. ALL RIGHTS RESERVED.</p>
+          <footer className="max-w-3xl mx-auto px-6 mt-16 text-center">
+            <p className="text-[10px] text-emerald-800/30 uppercase tracking-[0.4em] font-black">&copy; 2026 {BRAND_NAME} GLOBAL SYSTEMS. ALL RIGHTS RESERVED.</p>
           </footer>
         </div>
       )}
@@ -512,30 +340,14 @@ const App: React.FC = () => {
         .animate-fade-in { animation: fade-in 0.8s ease-out; }
         @keyframes fade-in-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-in-up { animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        @media print { 
-            .no-print, nav, footer, .fixed { display: none !important; }
-            body { background: white !important; padding: 0 !important; }
-            main { padding: 0 !important; max-width: 100% !important; }
-        }
+        @media print { .no-print, nav, footer, .fixed { display: none !important; } }
       `}</style>
     </>
   );
 };
 
-console.log("React application is starting...");
 const container = document.getElementById('root');
 if (container) {
-  try {
-    const root = createRoot(container);
-    root.render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    );
-    console.log("React rendered successfully.");
-  } catch (err) {
-    console.error("React Render Error:", err);
-  }
-} else {
-  console.error("Critical Error: Root element '#root' not found in DOM.");
+  const root = createRoot(container);
+  root.render(<App />);
 }
